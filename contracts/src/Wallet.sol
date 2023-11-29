@@ -6,8 +6,15 @@ import {BaseAccount} from "account-abstraction/core/BaseAccount.sol";
 import {UserOperation} from "account-abstraction/interfaces/UserOperation.sol";
 import {ECDSA} from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 import {Initializable} from "@openzeppelin/contracts/proxy/utils/Initializable.sol";
+import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
+import {TokenCallbackHandler} from "account-abstraction/samples/callback/TokenCallbackHandler.sol";
 
-contract Wallet is BaseAccount, Initializable {
+contract Wallet is
+    BaseAccount,
+    Initializable,
+    UUPSUpgradeable,
+    TokenCallbackHandler
+{
     using ECDSA for bytes32;
     address[] public owners;
     address public immutable walletFactory;
@@ -94,4 +101,24 @@ contract Wallet is BaseAccount, Initializable {
             _call(dests[i], values[i], funcs[i]);
         }
     }
+
+    function _authorizeUpgrade(
+        address
+    ) internal view override _requireFromEntryPointOrFactory {}
+
+    function encodeSignatures(
+        bytes[] memory signatures
+    ) public pure returns (bytes memory) {
+        return abi.encode(signatures);
+    }
+
+    function getDeposit() public view returns (uint256) {
+        return entryPoint().balanceOf(address(this));
+    }
+
+    function addDeposit() public payable {
+        entryPoint().depositTo{value: msg.value}(address(this));
+    }
+
+    receive() external payable {}
 }
