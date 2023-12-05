@@ -1,0 +1,90 @@
+## Setting up 1 EVM.
+
+==========================
+
+Chain 5
+
+Estimated gas price: 3.000000032 gwei
+
+Estimated total gas used for script: 3108097
+
+Estimated amount required: 0.009324291099459104 ETH
+
+==========================
+
+###
+Finding wallets for all the necessary addresses...
+##
+Sending transactions [0 - 0].
+⠁ [00:00:00] [########################################################################################################################################################] 1/1 txes (0.0s)
+Transactions saved to: /home/daniel/Documentos/Cursos/LearnWeb3/multisig-scw/contracts/broadcast/WalletFactory.s.sol/5/run-latest.json
+
+Sensitive values saved to: /home/daniel/Documentos/Cursos/LearnWeb3/multisig-scw/contracts/cache/WalletFactory.s.sol/5/run-latest.json
+
+##
+Waiting for receipts.
+⠉ [00:00:12] [####################################################################################################################################################] 1/1 receipts (0.0s)
+##### goerli
+✅  [Success]Hash: 0x4bf18dd084dfe77c9b63bd474ecf23eb31a8fb3d0a1542a9bab4637c2042af8e
+Contract Address: 0xb9d9e63233Dc5Eb840aD34cA96e7A70F866082B1
+Block: 10164549
+Paid: 0.007176252038273344 ETH (2392084 gas * 3.000000016 gwei)
+
+
+Transactions saved to: /home/daniel/Documentos/Cursos/LearnWeb3/multisig-scw/contracts/broadcast/WalletFactory.s.sol/5/run-latest.json
+
+Sensitive values saved to: /home/daniel/Documentos/Cursos/LearnWeb3/multisig-scw/contracts/cache/WalletFactory.s.sol/5/run-latest.json
+
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+Total Paid: 0.007176252038273344 ETH (2392084 gas * avg 3.000000016 gwei)
+##
+Start verification for (2) contracts
+Start verifying contract `0xb9d9e63233Dc5Eb840aD34cA96e7A70F866082B1` deployed on goerli
+
+Submitting verification for [src/WalletFactory.sol:WalletFactory] "0xb9d9e63233Dc5Eb840aD34cA96e7A70F866082B1".
+
+Submitting verification for [src/WalletFactory.sol:WalletFactory] "0xb9d9e63233Dc5Eb840aD34cA96e7A70F866082B1".
+
+Submitting verification for [src/WalletFactory.sol:WalletFactory] "0xb9d9e63233Dc5Eb840aD34cA96e7A70F866082B1".
+
+Submitting verification for [src/WalletFactory.sol:WalletFactory] "0xb9d9e63233Dc5Eb840aD34cA96e7A70F866082B1".
+
+Submitting verification for [src/WalletFactory.sol:WalletFactory] "0xb9d9e63233Dc5Eb840aD34cA96e7A70F866082B1".
+
+Submitting verification for [src/WalletFactory.sol:WalletFactory] "0xb9d9e63233Dc5Eb840aD34cA96e7A70F866082B1".
+Submitted contract for verification:
+        Response: `OK`
+        GUID: `kpirpd8sbvgwt5ceahpfq3w3n8zkckjudpsrgyvalntfqyyuwe`
+        URL:
+        https://goerli.etherscan.io/address/0xb9d9e63233dc5eb840ad34ca96e7a70f866082b1
+Contract verification status:
+Response: `NOTOK`
+Details: `Pending in queue`
+Contract verification status:
+Response: `OK`
+Details: `Pass - Verified`
+Contract successfully verified
+Start verifying contract `0x18B427F11b4951Bd5efB303B8e4F1c60daa23b94` deployed on goerli
+
+Submitting verification for [src/Wallet.sol:Wallet] "0x18B427F11b4951Bd5efB303B8e4F1c60daa23b94".
+Submitted contract for verification:
+        Response: `OK`
+        GUID: `8ynlhhtg3hdperlmg4dkx3met2agep9xgyclxs6aqrweyna2tc`
+        URL:
+        https://goerli.etherscan.io/address/0x18b427f11b4951bd5efb303b8e4f1c60daa23b94
+Contract verification status:
+Response: `NOTOK`
+Details: `Pending in queue`
+Contract verification status:
+Response: `OK`
+Details: `Pass - Verified`
+Contract successfully verified
+All (2) contracts were verified!
+
+Transactions saved to: /home/daniel/Documentos/Cursos/LearnWeb3/multisig-scw/contracts/broadcast/WalletFactory.s.sol/5/run-latest.json
+
+Sensitive values saved to: /home/daniel/Documentos/Cursos/LearnWeb3/multisig-scw/contracts/cache/WalletFactory.s.sol/5/run-latest.json
